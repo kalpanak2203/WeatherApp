@@ -1,0 +1,17 @@
+.Enter-city-bar {
+    box-sizing: content-box;
+    font-size: x-large;
+    border-radius: 0.5rem;
+}
+
+.getWeather-button:hover {
+    color: rgb(21, 21, 100);
+    font-size: x-large;
+    border-radius: 0.4rem;
+    
+}
+
+.weather-data {
+    font-size: large;
+    color: white;
+}
