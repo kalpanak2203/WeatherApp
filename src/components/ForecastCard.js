@@ -18,7 +18,7 @@ const ForecastCard = ({ forecastData, unit }) => {
             className="forecast-icon"
           />
           <p className="temp">
-            High: {Math.round(unit == "metric"?day.day.maxtemp_c:day.day.maxtemp_f)}{unit == "metric"?"°C":"°F"} / Low: {Math.round(unit == "metric"?day.day.mintemp_c:day.day.mintemp_f)}{unit == "metric"?"°C":"°F"}
+            High: {Math.round(unit === "metric" ? day.day.maxtemp_c : day.day.maxtemp_f)}{unit === "metric" ? "°C" : "°F"} / Low: {Math.round(unit === "metric" ? day.day.mintemp_c : day.day.mintemp_f)}{unit === "metric" ? "°C" : "°F"}
           </p>
         </div>
       ))}

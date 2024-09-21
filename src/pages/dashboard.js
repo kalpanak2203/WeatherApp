@@ -4,12 +4,12 @@ import Weather from "../components/weather";
 import ForecastCard from "../components/ForecastCard";
 import "./dashboard.css";
 
-const apiKey = 'bbff50e80358b0af490a9a3e8f82808a';
+const apiKey = '5a9438e54d8643be91e193147242109';
 
 const App = () => {
     const [city, setCity] = useState("delhi");
-    const [weatherData, setWeatherData] = useState([]);
-    const [unit, setUnit] = useState('metric'); // 'metric' for Celsius, 'imperial' for Fahrenheit
+    const [weatherData, setWeatherData] = useState({});
+    const [unit, setUnit] = useState('metric');
 
     useEffect(() => {
         getWeather();
@@ -18,10 +18,9 @@ const App = () => {
     const getWeather = async () => {
         try {
             const response = await axios.get(
-                `http://api.weatherapi.com/v1/forecast.json?key=5a9438e54d8643be91e193147242109&q=${city}&days=5&aqi=no&alerts=no`
+                `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`
             );
             setWeatherData(response.data);
-            console.log("apiResponse: ", response.data);
         } catch (error) {
             console.error('Error fetching the weather data', error);
         }
@@ -32,9 +31,9 @@ const App = () => {
     };
 
     return (
-        <div>
+        <div className="dashboard-container">
             <div className="card-container">
-                <h1 className="card-title">Current weather</h1>
+                <h1 className="card-title">WeatherForecast.com</h1>
                 <button className="unit-toggle-button" onClick={handleUnitToggle}>
                     Switch to {unit === 'metric' ? 'Fahrenheit' : 'Celsius'}
                 </button>
