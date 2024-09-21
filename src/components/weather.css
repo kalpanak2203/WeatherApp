@@ -1,0 +1,139 @@
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    height: 80vh;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Horizontal search section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%; /* Ensure the search section doesn't overflow */
+    max-width: 700px; /* Restrict width on larger screens */
+}
+
+/* Input bar styling */
+.enter-city-bar {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.7);
+    outline: none;
+    margin-right: 0.5rem;
+    width: 60%;
+    max-width: 300px; /* Prevent overflow on larger inputs */
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.getWeather-button {
+    background-color: #ff9800;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text from overflowing */
+}
+
+.getWeather-button:hover {
+    background-color: #e65100;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal weather card styling */
+.weather-card {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    height: auto; /* Auto height to avoid overflow */
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Weather data container */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    flex: 1;
+    overflow: hidden; /* Prevent overflow in case of long text */
+}
+
+/* City name styling */
+.city-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent overflow of the city name */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Temperature and weather icon container (horizontal layout) */
+.temp-weather {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    flex-wrap: wrap; /* Allow items to wrap to prevent overflow */
+    overflow: hidden;
+}
+
+.temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+/* Weather condition */
+.weather-condition {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Weather icon styling */
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    align-items: center;
+}
+
+/* For large screens */
+@media (min-width: 768px) {
+    .weather-container {
+        padding: 4rem;
+    }
+    .enter-city-bar, .getWeather-button {
+        font-size: 1.5rem;
+    }
+    .temp {
+        font-size: 3rem;
+    }
+}
