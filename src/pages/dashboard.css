@@ -3,8 +3,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #4d4855;
-    background-image: linear-gradient(147deg, #4d4855 0%, #2b2828 74%);
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     padding: 1rem;
 }
 
@@ -12,14 +12,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: rgba(255, 255, 255, 0.9); */
-    background-image: url("D:\React Projects\weather-app\images\noaa-JG_HfydoNqY-unsplash.jpg") ;
-    opacity: 1.0;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px; /* Increased width to accommodate weather forecast */
 }
 
 .card-title {
@@ -31,9 +28,18 @@
     background-clip: text;
     text-fill-color: transparent;
     animation: gradientShift 5s ease infinite;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem; /* Reduced to make space for line */
     text-align: center;
     position: relative;
+}
+
+/* Divider line below the card title */
+.title-divider {
+    width: 80%; /* Adjusts the width of the line relative to the container */
+    height: 2px;
+    background-color: #333; /* Dark color for contrast */
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
 }
 
 @keyframes gradientShift {
@@ -49,15 +55,18 @@
 }
 
 .unit-toggle-button {
-    background-color: #ff9800;
+    background-color: #4d3f2b;
     color: white;
-    font-size: 1.2rem;
-    padding: 0.5rem 1.5rem;
-    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 1.5rem;
+    position: absolute;
+    top: 20px;
+    right:75px;
 }
 
 .unit-toggle-button:hover {
@@ -65,3 +74,5 @@
     transform: scale(1.05);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 }
+
+

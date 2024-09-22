@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgb(46, 47, 48) 100%);
     padding: 1rem;
     border-radius: 15px;
     width: 150px;
@@ -40,4 +41,54 @@
 
 .temp {
     font-size: 0.9rem;
+}
+
+/* Forecast section styling */
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px; /* Adjust width for better layout */
+    margin-top: 2rem;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 150px; /* Set a fixed width for each forecast item */
+    margin: 0 10px; /* Spacing between each item */
+}
+
+.forecast-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.forecast-day {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.forecast-temp {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .forecast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .forecast-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
 }
