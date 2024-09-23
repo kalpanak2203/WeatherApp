@@ -134,3 +134,46 @@
         font-size: 4rem;
     }
 }
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .weather-container {
+        margin-left: 0; /* Center align container */
+        padding: 2rem;
+    }
+    .weather-card {
+        width: 90%; /* Adjust card width */
+        height: auto; /* Auto height */
+    }
+    .enter-city-bar {
+        font-size: 1rem;
+    }
+    .dropdown-search-button {
+        font-size: 1.1rem;
+    }
+    .temp {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .weather-container {
+        margin-left: 0; /* Center align container */
+        margin-top: 50px;
+        padding: 1rem;
+    }
+    .weather-card {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Auto height */
+    }
+    .enter-city-bar {
+        font-size: 0.9rem;
+    }
+    .dropdown-search-button {
+        font-size: 1rem;
+    }
+    .temp {
+        font-size: 2rem;
+    }
+}

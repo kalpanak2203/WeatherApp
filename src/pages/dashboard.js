@@ -7,7 +7,7 @@ import "./dashboard.css";
 const apiKey = '5a9438e54d8643be91e193147242109';
 
 const App = () => {
-    const [city, setCity] = useState("delhi");
+    const [city, setCity] = useState("New Delhi");
     const [weatherData, setWeatherData] = useState({});
     const [unit, setUnit] = useState('metric');
 
