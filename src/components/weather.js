@@ -6,7 +6,7 @@ const Weather = ({ city, weatherData, weatherOnClick, onChangeCity, unit }) => {
   const [filteredCities, setFilteredCities] = useState([]);
 
   // List of predefined cities
-  const cities = ["New York", "London", "Paris", "Tokyo", "Mumbai", "Sydney", "Toronto", "Dubai"];
+  const cities = ["New Delhi","New York","Lucknow", "London", "Paris","Punjab", "Tokyo", "Mumbai", "Sydney", "Toronto", "Dubai"];
 
   const weatherIcon = weatherData?.current ? `https://${weatherData?.current?.condition?.icon}` : null;
 
@@ -27,7 +27,7 @@ const Weather = ({ city, weatherData, weatherOnClick, onChangeCity, unit }) => {
   return (
     <div className="weather-container">
       <div className="search-section">
-        <div className="dropdown-container">
+        <div>
           <input
             type="text"
             value={city}

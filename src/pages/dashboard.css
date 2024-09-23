@@ -1,79 +1,79 @@
-.dashboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    padding: 1rem;
-}
-
-.card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-    
-    width: 100%;
-    max-width: 1200px; /* Increased width to accommodate weather forecast */
-}
-
-.card-title {
-    font-size: 3rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #ff6f61, #d76d77, #3a7bd5, #00d2ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    animation: gradientShift 5s ease infinite;
-    margin-bottom: 0.5rem; /* Reduced to make space for line */
-    text-align: center;
-    position: relative;
-}
-
-/* Divider line below the card title */
-.title-divider {
-    width: 80%; /* Adjusts the width of the line relative to the container */
-    height: 2px;
-    background-color: #333; /* Dark color for contrast */
-    margin-bottom: 1.5rem;
-    border-radius: 2px;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
+    .dashboard-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #eeebeb;
+        padding: 1rem;
     }
-    50% {
-        background-position: 100% 50%;
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: left; 
+        align-items: flex-start; 
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 1200px;
+        background: rgb(207, 99, 146);
+        background: radial-gradient(circle, rgb(111, 172, 179) 0%, rgb(203, 212, 123) 100%);
     }
-    100% {
-        background-position: 0% 50%;
+
+    .card-title {
+        font-size: 1.5rem; 
+        font-weight: bold;
+        background-color: rgb(11, 59, 15);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        animation: gradientShift 5s ease infinite;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        position: relative;
     }
-}
 
-.unit-toggle-button {
-    background-color: #4d3f2b;
-    color: white;
-    font-size: 1.1rem;
-    padding: 0.3rem 0.8rem;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 1.5rem;
-    position: absolute;
-    top: 20px;
-    right:75px;
-}
+    .card-title::after {
+        content: "";
+        display: block;
+        width: 95%;
+        height: 3px;
+        background-color: #a51906; 
+        margin: 0.5rem auto 1.5rem; 
+        border-radius: 2px;
+    }
 
-.unit-toggle-button:hover {
-    background-color: #e65100;
-    transform: scale(1.05);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-}
+    .unit-toggle-button {
+        background-color: #4d3f2b;
+        color: white;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem; 
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 1.5rem;
+        position: absolute;
+        top: 50px;
+        right: 274px;
+    }
 
+    .unit-toggle-button:hover {
+        background-color: #00b0e6;
+        transform: scale(1.05);
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    }
 
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
